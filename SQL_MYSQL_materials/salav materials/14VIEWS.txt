@@ -1,0 +1,43 @@
+View :
+A view is a virtual table created on base tables. A view is like a window which will help us to access the data from the base tables.
+A view can be created on single table, and it can be created on multiple tables. There are four types of views available as specified below.
+1. Simple View
+2. Complex View
+3. Inline View
+4. Materialized View
+➢ Simple View
+• A simple view can create on single table. As it is created on single table so considered as Simple view. Below mentioned is the syntax. 
+Syntax: -
+CREATE VIEW ETL AS
+SELECT id,firstname,age
+FROM persons121 ;
+
+➢ Complex View
+• A view created on multiple tables is called as Complex view. This view will help us to view the data from multiple tables.
+SQL> Create or Replace View View_Name as Select * from Database.Schema.Employee E inner join Dept D ON E.DeptID = D.DeptID
+
+
+Inline View: -
+An inline view can be created on Sub queries.
+Syntax: -
+SQL> Create View View_Name as Select * from Employee where Sal < (select avg(sal) from Employee)
+
+Materialized View: -
+A view that stores the definition as well as data. It creates replicas of data by storing it physically.
+Syntax: -
+Create Materialized View View_Name as
+Select EmployeeID,Ename
+FROM Employee
+Where DeptID = 2;
+
+Difference between View and Materialized View: -
+View :
+View is a logical structure of the table which will be used to retrieve data from one or more tables 
+Data access is slower compared to the materalized views
+views are generally used to restrict data from database
+
+Maeralized views :
+
+Materalized views are also logical structure but data is physically stored in a database.
+
+data access is faster compared to simple views because 

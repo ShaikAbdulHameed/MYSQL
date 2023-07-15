@@ -1,0 +1,54 @@
+Datafunctions: They are four data functions.
+A. ADD_MONTHS
+B. MONTHS_BETWEEN
+C. NEXT_DAY
+D. LAST_DAY
+
+A. ADD_MONTHS: ADD_MONTHS of months to the given date.
+Ex: Select ADD_MONTHS(SYSDATE,12)from dual
+Select ADD_MONTHS('11-APR-0',3) from dual;
+
+B. MONTH_BETWEEN: Returns number of months b/w given the two months.
+Ex: Select MONTHS_BETWEEN('11-JAN-05','11-JAN-04') from dual; 
+Select MONTHS_BETWEEN('11-JAN-04','11-JAN-05') from dual; 
+Select EMPNO, ENAME, SAL, MONTHS_BETWEEN(SYSDATE,HIREDATE) from emp;
+
+
+C. NEXT_DAY: Returns date of the specified date.
+Ex: Select NEXT_DAY(SYSDATE,'MONDAY') from dual; 
+Select NEXT_DAY('11-JAN-05','MONDAY') from dual; 
+
+D. LAST_DAY: Returns the last day of the month.
+Ex: Select LAST_DAY(SYSDATE) from dual; 
+Select LAST_DAY('11-FEB-05') from dual; 
+
+iv. Conversion functions:
+Conversion functions are one data type to another data type conversion. They are three conversion functions.
+➢ TO_CHAR
+➢ TO_NUMBER
+➢ TO_DATE
+
+
+1.TO_CHAR: This functions is having two functionalities.
+Date to_char:
+
+Select empid,name, TO_CHAR(HIREDATE,'DD-MM-YY') from emp22;
+Select TO_CHAR(SYSDATE,'DD-MONTH-YY') from dual;
+Select TO_CHAR(SYSDATE,'DAY') from dual; 
+Select TO_CHAR(SYSDATE,'YYYY') from dual;
+Select TO_CHAR(SYSDATE,'MM') from dual; 
+Select TO_CHAR(SYSDATE,'DD') from dual; 
+Select TO_CHAR(SYSDATE,'MON') from dual; 
+Select TO_CHAR(SYSDATE,'DY') from dual; 
+Select TO_CHAR(SYSDATE,'DD-MM-YY HH:MI:SS') from dual;
+
+Select * from emp22 where TO_CHAR(HIREDATE,'YYYY') = '2021';
+Select * from emp22 where TO_CHAR(HIREDATE,'MON') = 'FEB';
+
+2.TO_NUMBER:
+Ex: Select TO_NUMBER(LTRIM('$1400','$')) + 10 from dual;
+
+3.TO_DATE: This function is used to convert character values to data value.
+
+Select ADD_MONTHS(TO_DATE('11-JANUARY-2005','DD-MON-YY'),2) from dual;
+

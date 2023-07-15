@@ -1,0 +1,45 @@
+*LOGICAL OPERATORS: There are three logical operators. They are
+1. AND
+2. OR
+3. NOT
+
+1. AND( T AND T = T):
+Note: AND operator will return the rows when all the conditions are satisfied.
+
+Systax: select * from Customers33 where salary > 2000 AND Address='Bhopal';
+
+OR :
+
+select * from Customers33 where salary > 2000 OR Address='Bhopal';
+
+NOT:
+
+select * from customers33 where customer_id<>4
+-----------------------
+
+BETWEEN OPERATOR :
+
+select * from Customers33 where salary Between 2000 AND 9000;
+
+
+*IN OPERATOR:
+1. IN operator will be return the rows when the values are matching in the list.
+2. IN operator can be use as a replacement of OR operator.
+
+select * from Customers33 where customer_id in (1,2,5,9);
+-----------------------------------------------------
+*PATTERN MATCHING OPERATOR: They are two pattern matching operator.
+1. Percentage (%)
+2. Under score (_)
+
+1. Percentage (%): This command is used to select the letters.
+
+select * from Customers33 where Address like 'D%';
+
+2. Under Score: This command is also select the letters.
+
+select * from Customers33 where Address like 'M_m%';
+
+Note: Like keyword is used with pattern matching operator.
+==================================================================
+

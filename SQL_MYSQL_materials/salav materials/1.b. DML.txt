@@ -1,0 +1,108 @@
+
+DML : Data Manipulation Language
+
+===========SELECT============INSERT============UPDATE=============DELETE=============
+
+INSERT : It is used to insert data into a table.
+UPDATE: It is used to update existing data within a table.
+DELETE : It is used to delete records from a  table.
+SELECT  : It is used to Retrieve the data from the table .
+
+
+===================
+
+Select Column1,column2.....from tablename ;
+
+select * from tablename ;
+
+=======================
+
+INSERT :
+
+It is possible to write the INSERT INTO statement in two ways:
+
+1. Specify both the column names and the values to be inserted:
+
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+2. If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. 
+   However, make sure the order of the values is in the same order as the columns in the table. 
+   
+ INSERT INTO table_name
+VALUES (value1, value2, value3, ...);
+
+Examples :
+
+INSERT INTO CUSTOMERS1 (CUSTOMER_ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (1, 'Ramesh', 32, 'Ahmedabad', 2000.00 );
+
+INSERT INTO CUSTOMERS1 (CUSTOMER_ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (2, 'Khilan', 25, 'Delhi', 1500.00 );
+
+INSERT INTO CUSTOMERS1 (CUSTOMER_ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (3, 'kaushik', 23, 'Kota', 2000.00 );
+
+INSERT INTO CUSTOMERS1 (CUSTOMER_ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (4, 'Chaitali', 25, 'Mumbai', 6500.00 );
+
+INSERT INTO CUSTOMERS1 (CUSTOMER_ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (5, 'Hardik', 27, 'Bhopal', 8500.00 );
+
+INSERT INTO CUSTOMERS1 (CUSTOMER_ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (6, 'Komal', 22, 'MP', 4500.00 );
+----------------------------------------------------------------
+You can create a record in the CUSTOMERS table by using the second syntax as shown below.
+
+INSERT INTO CUSTOMERS1 
+VALUES (7, 'Muffy', 24, 'Indore', 10000.00 );
+
+-------------------------------------------orders----------------------------------------------------
+
+INSERT INTO ORDERS1 (OID,CUSTOMER_ID,AMOUNT)
+VALUES (100,2,2000);
+
+INSERT INTO ORDERS1 (OID,CUSTOMER_ID,AMOUNT)
+VALUES (101,3,1000);
+
+INSERT INTO ORDERS1 (OID,CUSTOMER_ID,AMOUNT)
+VALUES (102,3,3000);
+
+INSERT INTO ORDERS1 (OID,CUSTOMER_ID,AMOUNT)
+VALUES (103,4,4000);
+
+INSERT INTO ORDERS1 (OID,CUSTOMER_ID,AMOUNT)
+VALUES (104,5,5000);
+
+
+==========================================================================================
+
+UPDATE : To modify the Existing records in a table
+
+UPDATE table_name
+SET column1 = value1 WHERE [condition];
+
+SQL> UPDATE CUSTOMERS1
+SET ADDRESS = 'Pune'
+WHERE CUSTOMER_ID = 6;
+
+SQL> UPDATE CUSTOMERS1
+SET ADDRESS = 'Pune', SALARY = 1000.00;
+
+=============================================================================
+
+DELETE : SQL DELETE Query is used to delete the existing records from a table.
+
+You can use the WHERE clause with a DELETE query to delete the selected rows, otherwise all the records would be deleted.
+
+DELETE FROM table_name
+WHERE [condition];
+
+SQL> DELETE FROM CUSTOMERS
+WHERE ID = 6;
+
+SQL> DELETE FROM CUSTOMERS;
+
+================================================================
+
+========================================================

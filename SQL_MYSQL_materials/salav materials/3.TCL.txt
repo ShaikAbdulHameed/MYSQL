@@ -1,0 +1,27 @@
+TCL : Transaction control language  
+==========================
+TCL commands deal with the transaction within the database.
+
+Commit :
+
+This command is used to save all the transactions to the database.
+
+Syntax:
+Commit;
+
+For example:
+DELETE FROM Students  
+WHERE RollNo =25;  
+
+COMMIT;  
+----------------------------------------
+Rollback :
+
+Rollback command allows you to undo transactions that have not already been saved to the database.
+
+Syntax:
+ROLLBACK;  
+
+Example:
+DELETE FROM Students  
+WHERE RollNo =25;  

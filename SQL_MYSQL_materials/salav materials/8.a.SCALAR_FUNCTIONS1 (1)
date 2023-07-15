@@ -1,0 +1,66 @@
+
+Dual table: It is a dummy table which is generally used to perform some calculation is seeing to the system date and etc. 
+Dual table is collection of one row and one column with ‘X’ in it.
+
+EX : select * from dual
+
+Select SYSDATE from dual;
+Select 10+20 from dual;
+Select 20+40, 50+60 from dual;
+
+Scalar functions or single row functions: Scalar function are decided into four types. They are given that.
+i. Character functions
+ii. Number functions
+iii. Date functions
+iv. Conversion functions
+
+1) Character Functions :
+
+Upper: converts into lower case to upper case
+
+Select upper('oracle') from dual;
+
+Lower: This function is convert to the upper to lower case.
+
+Select lower('ORACLE') from dual;
+
+INITCAP: First letter is capital and reaming letters are small letters.
+
+Select INITCAP('oracle training') from dual;
+Select INITCAP('ORACLE TRAINING') from dual;
+
+LENGTH: Returns length of the string.
+
+Select LENGTH('oracle') from dual;
+
+LPAD: pads the character towards the left side.
+Ex: select LPAD('oracle',10,'z') from dual ;
+
+RPAD: Rpad the character towards the right side.
+Ex: Select RPAD('ORACLE',10,'X') from dual; 
+
+LTRIM:
+Ex: Select LTRIM('zzoracle','z') from dual;
+
+RTRIM:
+Ex: Select RTRIM('ZORACLEZZZ','Z') from dual;
+Select RTRIM('oracle   ') from dual;
+
+
+TRIM: Removes the specified characters from both sides.
+Ex: 
+Select TRIM('   ORACLE  ') from dual;
+
+INSTR: Returns the passion of the string
+Ex: Select INSTR('ORACLE','A') from dual; 
+Select INSTR('oracle','H') from dual;
+
+SUBSTR: Returns the part of the string.
+Ex: Select SUBSTR('ORACLE',2,3) from dual;
+Select SUBSTR('ORACLE',2,4) from dual; 
+Select SUBSTR('ORACLE',2,1) from dual;
+Select SUBSTR('ORACLE',3,2) from dual; 
+
+CONCAT: To join the two words. It will accept only two character.
+Ex: Select concat('MAGA','STAR') from dual;
+Select concat(concat('MAGA','STAR'),'CHIRU') from dual;

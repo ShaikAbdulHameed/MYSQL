@@ -1,0 +1,72 @@
+
+DDL:
+===========CREATE============ALTER=========DROP==============TRUNCATE==========RENAME===========
+
+Create Table :  SQL CREATE TABLE statement is used to create a new table.
+====================
+
+CREATE TABLE CUSTOMERS1(
+   CUSTOMER_ID   INT              NOT NULL,
+   NAME VARCHAR (20)     NOT NULL,
+   AGE  INT              NOT NULL,
+   ADDRESS  CHAR (25) ,
+   SALARY   DECIMAL (18, 2),       
+   PRIMARY KEY (CUSTOMER_ID)
+);
+
+CREATE TABLE ORDERS(
+   OID   INT              NOT NULL,
+   CUSTOMER_ID   INT     NOT NULL,
+   AMOUNT   DECIMAL (18, 2),       
+   PRIMARY KEY (OID)
+);
+
+ALTER :
+============================
+ALTER TABLE command is used to add, delete or modify columns in an existing table and drop various constraints on an existing table.
+
+-------------------------
+To Add a New Column in an Existing Table 
+
+Syntax : ALTER TABLE table_name ADD column_name datatype;
+
+ALTER TABLE CUSTOMERS ADD GENDER char(1);
+
+------------------------
+To DROP COLUMN in an existing table
+
+Syntax : ALTER TABLE table_name DROP COLUMN column_name;
+
+-----------------------------
+To change the DATA TYPE of a column
+
+Syntax : ALTER TABLE table_name MODIFY COLUMN column_name datatype;
+
+ex : ALTER table customers1 modify(gender varchar2(200));
+-----------------------------------------------
+RENAME: TO RENAME the column
+
+Syntax : ALTER TABLE "table_name"
+RENAME COLUMN "column 1" TO "column 2";
+
+Examle : ALTER TABLE Customer RENAME COLUMN Address TO Addr;	
+
+==========================================================================================
+
+DROP : SQL DROP TABLE statement is used to remove a table definition and all the data for that table.
+
+NOTE − You should be very careful while using this command because once a table is deleted then all the information available in that table will also be lost forever.
+
+Syntax :  DROP TABLE table_name;
+
+================================================================================
+TRUNCATE : SQL TRUNCATE TABLE command is used to delete complete data from an existing table.
+
+Syntax : TRUNCATE TABLE  table_name; 
+
+==================================================================
+RENAME The TABLE : 
+
+working Example : ALTER TABLE Customers1 RENAME To customers2;
+
+=======================================================================

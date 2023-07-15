@@ -1,0 +1,30 @@
+
+DRUMP DATA:  //only inserted data or entered data is visible. we simply call "Record data"(row data).
+---------
+
+INSERT INTO `employee` VALUES (1,'Abdul'),(2,'Akram'),(3,'Emam'),(5,'baig');
+                    
+                        (or)
+INSERT INTO `table-data - 2022-05-26t202604.913` VALUES ('','M4+',1490265729,'Hk collection ','vinay.sharma@bijnis.com',0),                                                        ('','M4+',1490267486,'Manku','vinay.sharma@bijnis.com',0);             //end with semocolon
+
+
+DRUMP STRUCTURE: // only columns of paricular records structure is visible. we simply call "fields data"(column data)
+---------------
+
+CREATE TABLE `employee` (
+  `empid` int NOT NULL,
+  `empname` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`empid`)
+);
+
+DRUMP DATA AND STRUCTURE: //Both Record data and fields data;
+------------------------
+
+
+CREATE TABLE `employee` (
+  `empid` int NOT NULL,
+  `empname` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`empid`)
+);
+
+INSERT INTO `employee` VALUES (1,'Abdul'),(2,'Akram'),(3,'Emam'),(5,'baig');

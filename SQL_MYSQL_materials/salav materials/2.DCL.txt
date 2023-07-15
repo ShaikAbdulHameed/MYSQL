@@ -1,0 +1,23 @@
+DCL (Data Control Language) :
+===============================
+DCL includes commands like GRANT and REVOKE, which are useful to give “rights & permissions.”
+
+Grant:
+Grant command is used to Grant the privileges to the user.
+
+Syntax:
+
+GRANT <PRIVILEGE_NAME1>,<PRIVILEGE_NAME2> TO <USER_NAME>;
+
+For example:
+
+ GRANT Select ,insert, update ON student TO AJAY;
+
+GRANT select ON student TO AJAY;
+--------------------------------------------------
+
+REVOKE: This command is used to get back the privileges which are granted.
+
+Syntax: REVOKE<privilege_name><privilege_name> ON <table_name> from <user_name>;
+
+Ex:  REVOKE select, insert, update ON student from AJAY;

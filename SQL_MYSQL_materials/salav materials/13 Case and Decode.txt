@@ -1,0 +1,35 @@
+CAse :
+The CASE statement goes through conditions and returns a value when the first condition is met (like an if-then-else statement). 
+So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause.
+
+If there is no ELSE part and no conditions are true, it returns NULL.
+CREATE TABLE Persons121 ( ID int NOT NULL, 
+LastName varchar(255) NOT NULL, 
+FirstName varchar(255),
+ Age int,
+ CHECK (Age>=18));
+
+SELECT * from persons121
+insert into persons121 values(1,'xyz','wed',18)
+
+SELECT id,firstname,age ,
+CASE
+    WHEN AGE > 18 THEN 'Major'
+    WHEN AGE<18  THEN 'Minor'
+    ELSE 'NA'
+END 
+FROM persons121;
+
+Decode :
+
+It will work for equality operator 
+if non matched value it will return default null
+
+DECODE( expression , search , result [, search , result]... [, default] )
+
+SELECT id,firstname,age ,
+   DECODE(AGE, '18', 'teen',
+   '19','Major') 
+     NA FROM persons121;
+	 
+	 

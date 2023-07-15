@@ -1,0 +1,100 @@
+*INTEGRITY CONSTRAINS:
+Constrains are rules which are applied on tables.
+Constrains helps in improving the accurency and quality of the data base.
+They are five types of constrains.
+
+1. NOT NULL
+2. UNIQUE
+3. PRIMARY KEY
+4. FOREIGN KEY or REFERENTIAL INTEGRITY CONSTRAINS
+5. CHECK
+
+Constrains can be created at two levels
+
+a. Column level
+b. Table level
+
+1.NOT NULL: This constrains will not accept null values.
+NOT NULL constrains can be created only at column level.
+Ex:
+*Create table student1(Sno number(3) NOT NULL,
+Sname varchar2(10),
+Marks number(3));
+
+2.UNIQUE CONSTRAINS: This constrains will not accept duplicate values.
+This constrains can be created at column level as well as table level.
+Ex: Creating unique constraint at column level.
+* Create table student3(Sno number(3) UNIQUE,
+Sname varchar2(10),
+Marks number(3));
+
+
+*Create table student4(Sno number(3) UNIQUE,
+Sname varchar2(10),
+Marks number(3) UNIQUE);
+Insert into student4 values(101,’Arun’,50);
+Insert into student4 values(102,’Arun’,50);
+
+Creating unique constraint at table level:
+
+* Create table student5(Sno number(3),
+Sname varchar2(10),
+Marks number(3),
+UNIQUE(Sno));
+
+
+Note: There is no different when a constrain at column level or table level.
+
+
+**3. PRIMARY KEY CONSTRIANS:
+A primary key constrains of a combination of NOT NULL and UNIQUE.
+A primary key constrains will not accept null values as well as duplicate values.
+Primary key column is used to uniquely every row in a table.
+A table can have only one primary key.
+Primary key constrains can be created at column level or table level.
+Create primary key constraint at column level:
+Ex:
+* Create table student6(Sno number(3) PRIMARY KEY,
+Sname varchar2(10),
+Marks number(3));
+
+Create Primary key constraint at table level:
+Ex:
+* Create table student7(Sno number(3),
+Sname varchar2(10),
+Marks number(3)
+PRIMARY KEY(Sno));
+
+***3.1.COMPOSITE PRIMARY KEY:
+When primary key is applied a multiple columns it is called composite primary key.
+Composite primary key can be applied only at table level.
+
+*Creating composite primary key constraint at table level:
+Ex:
+Create table student9(Surname varchar2(10),
+Firstname varchar2(10),
+Marks number(3),
+PRIMARY KEY(Surname,Firstname));
+
+***4.FOREIGN KEY CONSTRAINS or REFERENTIAL INTEGRITY:
+These constraints establish relationship between tables.
+This relationship is called as parent and child relationship. It is also called master detail relationship.
+
+A foreign key column in the child table will only accept values which are their the primary key column or unique column of parent table.
+
+*Check constraint: 
+
+CREATE TABLE Persons ( ID int NOT NULL, 
+LastName varchar(255) NOT NULL, 
+FirstName varchar(255),
+ Age int,
+ CHECK (Age>=18));
+
+Here you can observe that we are defining Check constraint for one field. T
+his will help us if anyone is entering the data, then that field will check if that data meets the requirement.
+
+ For example: - If you are seeing some sites or any applications, it will ask you like enter your age. 
+ In age column if you enter 13 or 14, application will not allow you to move further as you are not meeting the requirement. 
+ The requirement is that your age should be 18 or above. 
+ Like this we can give any Check constraint to any fields or multiple fields in the table.
+

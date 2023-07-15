@@ -1,0 +1,60 @@
+Number functions:
+
+a. ABS: Returns absolute values
+Ex: Select ABS(-40) from dual;
+Select ABS(40) from dual;
+
+b. SQRT: Returns the squawroot values.
+Ex: Select SQRT(25) from dual; 
+Select SQRT(36) from dual;
+
+
+c. MOD(A,B): Returns the MOD vaues.
+Ex: select MOD(10,3) from dual; 
+
+
+d. POWER(A,B):
+Ex: Select POWER(2,5) from dual; 
+
+
+e. CEIL:
+Ex: Select CEIL(40.9) from dual; 
+Select CEIL(40.2) from dual; 
+Select CEIL(40.5) from dual; 
+
+
+f. FLOOR:
+Ex: Select FLOOR(40.9) from dual; 
+Select FLOOR(40.2) from dual;
+Select FLOOR(40.5) from dual;
+
+
+g. TRUNC:(TRUNCATE) Remove the decimal points.
+Ex: Select TRUNC(40.9) from dual; 
+Select TRUNC(40.2) from dual; 
+Select TRUNC(40.5) from dual; 
+Select TRUNC(40.1234,2) from dual; 
+Select TRUNC(685.195364,3) from dual; 
+Select TRUNC(6854,-1) from dual; 
+Select TRUNC(6854,-2) from dual;
+Select TRUNC(7777,-3) from dual;
+
+
+h. ROUND: Rounds of the nearest value.
+Ex: Select ROUND(40.9) from dual; 
+Select ROUND(40.2) from dual; 
+Select ROUND(123.863,2) from dual; 
+Select ROUND(123.868,2) from dual; 
+Select ROUND(856.81766,3) from dual; 
+Select ROUND(123,-1) from dual;
+Select ROUND(140,-2) from dual; 
+Select ROUND(127,-3) from dual; 
+Select ROUND(17763,-3) from dual; 
+
+
+i. GREATEST:
+Ex: Select GREATEST(100,200,300) from dual; 
+
+
+j. LEAST:
+Ex: Select LEAST(100,200,300) from dual; 

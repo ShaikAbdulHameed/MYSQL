@@ -1,0 +1,9 @@
+ANALYTICAL Functions
+
+
+SELECT customer_id, 
+RANK () OVER (
+ORDER BY customer_id
+) AS Rank_no ,DENSE_RANK () OVER (
+ORDER BY customer_id
+) AS DRank_no  FROM customers5;

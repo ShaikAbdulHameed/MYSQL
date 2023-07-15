@@ -1,0 +1,38 @@
+*DATA TYPES:
+1. CHAR: The data type is used to store alpha numeric values.
+It can be also store special symbols like -,:,/,* and etc.
+This data type of fixed size. The Maximum size is 255 bytes.
+Note: Memory is not used efficiently.
+
+2.VARCHAR2: This data type it can store alphanumeric values special symbols like -,:,_
+and etc. This data type is of variable size. Maximum size 4000 bytes.
+Note: Memory is efficiently used.
+
+3.NUMBER(P,S): p-precision/s-scale
+This data type used to store numeric values maximum size 38 digits.
+
+INT:This data type is used to store the numbers
+
+4.DATE: This data type is used to store date values it will not have size.
+Range 01-JAN-4712 BC TO 31-DEC-9999 AD
+Default Date format is DD-MM-YY.
+Ex:
+Create table student1(SNO number(2),
+SNAME varchar2(20),
+MARKS number(3),
+DOJ Date);
+Insert into student1 values(101,’Ravi’,99,SYSDATE);
+
+5.LONG: Similar to varchar2 data type. Maximum size 2 GB.
+
+6.RAW: used to store Images,logos,digital signatures etc. Maximum size 255 bytes.
+
+7.LONG RAW: Similar to RAW data type. Maximum size 2 GB.
+
+8.CLOB:(character large object) used to store characters. Maximum size 4 GB.
+
+9.BLO:(binary large object) used to store binary data. Maximum size 4 GB.
+
+10.BFILE:(binary file)
+
+*Describe command: This command is used to see the structure of the table.

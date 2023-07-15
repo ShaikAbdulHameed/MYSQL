@@ -1,0 +1,80 @@
+Sub Queries :
+===================================
+
+CREATE TABLE CUSTOMERS1(
+   CUSTOMER_ID   INT              NOT NULL,
+   NAME VARCHAR (20)     NOT NULL,
+   AGE  INT              NOT NULL,
+   ADDRESS  CHAR (25) ,
+   SALARY   DECIMAL (18, 2),       
+   PRIMARY KEY (CUSTOMER_ID)
+);
+---------------------------------------------
+
+INSERT INTO CUSTOMERS1 (CUSTOMER_ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (1, 'Ramesh', 32, 'Ahmedabad', 2000.00 );
+
+INSERT INTO CUSTOMERS1 (CUSTOMER_ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (2, 'Khilan', 25, 'Delhi', 1500.00 );
+
+INSERT INTO CUSTOMERS1 (CUSTOMER_ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (3, 'kaushik', 23, 'Kota', 2000.00 );
+
+INSERT INTO CUSTOMERS1 (CUSTOMER_ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (4, 'Chaitali', 25, 'Mumbai', 6500.00 );
+
+INSERT INTO CUSTOMERS1 (CUSTOMER_ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (5, 'Hardik', 27, 'Bhopal', 8500.00 );
+
+INSERT INTO CUSTOMERS1 (CUSTOMER_ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (6, 'Komal', 22, 'MP', 4500.00 );
+===============================
+
+Note:
+Subqueries should always place in the inside.
+Subqueries are executed first and then parent query is executed by using the result of sub query.
+
+
+1. Single Row subquery :  When subquery returns one row (1 value). It is called Single RowSubquery
+
+Single Row Subquery:
+When subquery returns one row (1 value). It is called Single RowSubquery
+
+
+Select * from customers1 where salary > (select salary from customers1 where name = 'Khilan');
+
+Select * from customers1 where salary > (select salary from customers1
+Where name = (select name from customers1
+Where customer_id = 4));
+
+
+2. Multiple Row subquery
+When subquery returns multiple rows. It is called multiple row Subquery.
+Note: we should multiple row operators with multiple row subqueries. They are three multiple row operators.
+1. IN
+2. ANY
+3. ALL
+
+Select * from customers1
+Where salary > ALL(Select salary from customers1
+Where customer_id = 1);
+
+3. Multiple column subquery
+
+When subquery return more then one column. It is called multiple column subquery.
+We should use in operator with multiple column subqueries.
+
+Select * from customers1 where(address,salary) IN
+(select address, salary from customers1 where customer_id = 1);
+
+4. Co-related subquery
+
+When subquery is executed in relation to parent query, it is called co-related subquery.
+
+Select * from customers1 where salary > (select AVG(salary) from customers1 
+where customer_id =4)
+
+
+
+
+

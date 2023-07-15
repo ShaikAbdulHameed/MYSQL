@@ -1,0 +1,42 @@
+
+
+SUM,AAVG,MIN,MAX,COUNT,COUNT(EXP)
+
+======================================================
+CREATE TABLE CUSTOMERS33(
+   CUSTOMER_ID   INT              NOT NULL,
+   NAME VARCHAR (20)     NOT NULL,
+   AGE  INT              NOT NULL,
+   ADDRESS  CHAR (25) ,
+   SALARY   DECIMAL (18, 2)     
+ 
+);
+=====================================================================
+INSERT INTO CUSTOMERS33 (CUSTOMER_ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (1, 'Ramesh', 32, 'Ahmedabad', 2000.00 );
+
+INSERT INTO CUSTOMERS33 (CUSTOMER_ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (2, 'Khilan', 25, 'Delhi', 1500.00 );
+
+INSERT INTO CUSTOMERS33 (CUSTOMER_ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (3, 'kaushik', 23, 'Kota', 2000.00 );
+
+INSERT INTO CUSTOMERS33 (CUSTOMER_ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (4, 'Chaitali', 25, 'Mumbai', 6500.00 );
+
+INSERT INTO CUSTOMERS33 (CUSTOMER_ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (5, 'Hardik', 27, 'Bhopal', 8500.00 );
+
+INSERT INTO CUSTOMERS33 (CUSTOMER_ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (6, 'Komal', 22, 'MP', 4500.00 );
+==========================================================
+
+AVG: select AVG(SALARY) from CUSTOMERS33;
+SUM: select SUM(SALARY) from CUSTOMERS33;
+MAX: select MAX(SALARY) from CUSTOMERS33;
+MIN: select MIN(SALARY) from CUSTOMERS33;
+COUNT(*): select COUNT(*) from CUSTOMERS33; //Return total no.of rows in the table
+COUNT(EXPR): Return no.of values present in the column.
+Ex: Select COUNT(SALARY) from CUSTOMERS33;
+Select COUNT(CUSTOMER_ID) from CUSTOMERS33;
+Select COUNT(NAME) from CUSTOMERS33;

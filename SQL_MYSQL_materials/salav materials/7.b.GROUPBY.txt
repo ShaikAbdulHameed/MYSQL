@@ -1,0 +1,29 @@
+
+where clause: class is used to select specific rows basing on a condition.
+Ex:
+Select * from customers1 where salary>2000;
+------------------------
+Distinct Keyword: it is display distinct values (unique values).
+Duplicates of suppressed.
+Ex: select distinct customer_id from customers1;
+---------------------------------------------
+*Group By clause: Group By clause is used to divided rows into several group. So that we can apply group function on each group.
+We can use the combination of where clause and Group By clause.
+First where clause is executed on the result of where clause Group By clause is apply.
+
+Ex :
+Select job, avg(sal) from emp Group By job;
+
+*Rule of group by clause: All the column in the select of list should use group functions or should by included in group by clause.
+
+
+*Having clause: (to use Group By clause)
+Having clause is used to filter the output from Group By clause.
+Ex: Select deptno, sum(sal) from emp Group By deptno having sum(sal) > 9000;
+
+*Order By clause:
+Order By clause is used to arrange the rows in the table.
+By default order by clause ascending order.
+Null values are arranged in the last.
+
+Note: Order by clause should be the last change of the query.
